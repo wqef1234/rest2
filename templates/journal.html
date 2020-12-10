@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Welcome</h1>
+<h1>Your book collection</h1>
+<ul>
+    {{range .Journals}}
+        <li>
+            <b>Редактор: {{.Redactor}}</b>
+            <p>Серийный номер: {{.SerialNumber}}</p>
+            <p>Издание: {{.Edition}}</p>
+            <p>Количество страниц: {{.PageCount}}</p>
+
+        </li>
+
+
+    {{end}}
+</ul>
+<a href="/books">список книг</a>
+<a href="/journals/create">Добавить журнал в колекцию</a>
+<form action="/logout" method="post">
+    <button type="submit">Logout</button>
+</form>
+</body>
+</html>

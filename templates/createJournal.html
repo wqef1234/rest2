@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="/journals/create">
+    <div>
+        <label for="redactor">Redactor</label>
+        <input type="redactor" id="redactor" name="redactor">
+    </div>
+    <div>
+        <label for="serialnumber">Serial Number  </label>
+        <input type="serialnumber" id="serialnumber" name="serialnumber">
+    </div>
+    <div>
+        <label for="edition">Edition</label>
+        <input type="edition" id="edition" name="edition">
+    </div>
+    <div>
+        <label for="pagecount">PageCount</label>
+        <input type="pagecount" id="pagecount" name="pagecount">
+    </div>
+
+    <button type="submit" >Add</button>
+    <a href="/journals">список журналов</a>
+</form>
+</body>
+</html>
