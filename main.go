@@ -177,6 +177,9 @@ var LogoutFormPageHandler = func(w http.ResponseWriter,r *http.Request){
 	http.Redirect(w,r,"/login",302)
 }
 
+ func Hello(w http.ResponseWriter,r *http.Request){
+	fmt.Fprintf(w,"Hello")
+}
 
 
 //handlers
@@ -228,15 +231,18 @@ func init(){
 
 
 const (
-	connPort = "8081"
-	connHost = "localhost"
+	connPort = "8080"
+	connHost = "0.0.0.0"
 )
+
+
 
 func main(){
 	router := mux.NewRouter()
 
 	logFile, err := os.OpenFile("server.log", os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0666)
 
+	router.HandleFunc("/",Hello)
 
 	router.Handle("/login",handlers.LoggingHandler(logFile,
 		LoginPageHandler)).Methods("GET","POST")

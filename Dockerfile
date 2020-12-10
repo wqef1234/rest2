@@ -14,3 +14,4 @@ RUN go mod download
 RUN go build -o main .
 
 CMD ["/rest2/main"]
+

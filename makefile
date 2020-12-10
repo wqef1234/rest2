@@ -16,7 +16,7 @@ docker_build:
 
 .PHONY: docker_run
 docker_run:
-	sudo docker run -p 8080:8081 -it rest2
+	sudo docker run -p 8081:8080 -it rest2
 
 .PHONY: images
 images:
